@@ -1,4 +1,4 @@
-module First
+module Mymodule.First
 ( square
 , quad
 , greater
@@ -7,11 +7,11 @@ module First
 ) where
 
 -- prepare
-square :: Integer -> Integer
+square :: Float -> Float
 square x = x * x
 
 -- 1
-quad :: Integer -> Integer
+quad :: Float -> Float
 quad = square . square
 
 -- -- *Main> quad 2
