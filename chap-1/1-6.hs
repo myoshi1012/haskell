@@ -3,8 +3,15 @@
 subst :: (a -> b -> c) -> (a -> b) -> a -> c
 subst f g x = f x (g x)
 
-flip :: (a -> a -> a) -> (a -> a -> a)
-flip f x y = f y x
+flip' :: (a -> b -> c) -> (b -> a -> c)
+flip' f x y = f y x
+-- *Main> f = \x y -> x `div` y
+-- *Main> flip' f 4 2
+-- 0
+-- *Main> f' = flip' f
+-- *Main> f' 4 2
+-- 0
+
 
 -- 2.
 swap :: (a,b) -> (b,a)
@@ -24,3 +31,4 @@ strange f g = g (f g)
 -- 4. 
 square :: Num a => a -> a
 square x = x * x
+
